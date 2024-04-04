@@ -38,7 +38,7 @@ class CpGPredictor(torch.nn.Module):
         return logits
 
 model = torch.load('model_variable_length.pth')
-model.eval()
+#model.eval()
 
 def main():
     st.title("Count CG")
