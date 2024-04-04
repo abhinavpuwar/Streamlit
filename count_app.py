@@ -37,7 +37,8 @@ class CpGPredictor(torch.nn.Module):
         logits = output.squeeze(1)
         return logits
 
-model = torch.load('model_variable_length.pth')
+model = CpGPredictor()
+model.load_state_dict(torch.load('model_variable_length.pth'))
 model.eval()
 
 def main():
